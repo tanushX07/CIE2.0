@@ -1,12 +1,11 @@
-# speed.py
+def calculate_speed(distance, time):
+    if time == 0:
+        return "Time cannot be zero"
+    return distance / time
 
-def calculate_speed(distance_km, time_hours):
-    if time_hours == 0:
-        return "Time cannot be zero."
-    return distance_km / time_hours
+if _name_ == "_main_":
+    distance = float(input("Enter distance (in km): "))
+    time = float(input("Enter time (in hours): "))
 
-
-if __name__ == "__main__":
-    distance = 100  # km
-    time = 2        # hours
-    print("Speed:", calculate_speed(distance, time), "km/h")
+    speed = calculate_speed(distance, time)
+    print("Speed is:", speed, "km/h")
